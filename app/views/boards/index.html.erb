@@ -1,0 +1,18 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+<div class="boards-container">
+<h3>投稿一覧</h3>
+  <% @boards.each do |t| %>
+    <div class="board">
+      <div class="main-box">
+        <div class="left-container"><%= t.body %></div>
+        <div class="right-container">
+          <%= link_to "詳細", board_path(t.id) %>
+          <%= link_to "編集", edit_board_path(t.id) %>
+          <%= link_to "削除", board_path(t.id), method: :delete %>
+        </div>
+      </div>
+        <p class="time"><%= t.created_at %></p>
+    </div>
+  <% end %>
+</div>

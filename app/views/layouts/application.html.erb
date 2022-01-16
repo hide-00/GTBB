@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GTBB</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <h1><%= link_to "GTBB", boards_path %></h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "ホーム", boards_path %></li>
+        <li><%= link_to "新規投稿",boards_new_path %></li>
+      </ul>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+     <p>Copyright © Hidekazu Tanaka All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

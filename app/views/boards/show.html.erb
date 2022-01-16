@@ -1,0 +1,8 @@
+<h3>投稿詳細</h3>
+<div class="board">
+  <p><%= @board.body %></p>
+  <p><%= @board.created_at %></p>
+</div>
+
+<%= link_to "編集する", edit_board_path(@board.id) %>
+<%= link_to "投稿一覧に戻る", boards_path %>
